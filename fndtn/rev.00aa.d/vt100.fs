@@ -7,6 +7,9 @@
 : down1 ( -- )
   esc[[ 1 emit [char] B emit ;
 
+: up 0 do up1 loop ;
+: down 0 do down1 loop ;
+
 : saystack cr .s cr ;
 
 : 5As ( -- )
