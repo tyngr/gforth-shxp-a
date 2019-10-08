@@ -32,7 +32,6 @@ the terminal, from the serial device (such as a MODEM, or
 more generally, the device called '/dev/ttyS0' in Linux - as
 well as other similar 'tty' devices).
 
-
 This program demonstrates both ordinary typewritten characters
 (a b c d e 9 8 7 6 5 + - , > < = and all the rest) as generated
 by gforth, primarily using the (gforth) 'emit' word, which (in
@@ -45,6 +44,25 @@ allow 'full screen' use of the terminal, rather than line-by-line
 uses, where the terminal never goes back to the previous line for
 any reason (as with some early teleprinters).
 
+These are the Escape Codes, which in general begin with the ESC
+character ASCII 27, 0x1b, octal 33).  The ESC char is usually
+followed with a left square bracket char, ASCII 91 (0x5b, oct 133)
+
+
+BINARY
+
+ Analysis
+
+   ten     hex          binary         octal
+   ===    ====    =================    =====
+     0    0x00    0 0 0 0   0 0 0 0    0 0 0
+     1    0x01    0 0 0 0   0 0 0 1    0 0 1
+     2    0x02    0 0 0 0   0 0 1 0    0 0 2
+     3    0x03    0 0 0 0   0 0 1 1    0 0 3
+     4    0x04    0 0 0 0   0 1 0 0    0 0 4
+     5    0x05    0 0 0 0   0 1 0 1    0 0 5
+     6    0x06    0 0 0 0   0 1 1 0    0 0 6
+     7    0x07    0 0 0 0   0 1 1 1    0 0 7
 
 On branch edits-aa-aa-
 Tue Oct  8 07:26:53 UTC 2019
