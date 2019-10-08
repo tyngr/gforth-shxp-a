@@ -7,14 +7,25 @@
 : down1 ( -- )
   esc[[ 1 emit [char] B emit ;
 
-: up 0 do up1 loop ; ( count -- )
-: down 0 do down1 loop ; ( count -- )
+: left1 ( -- )
+  esc[[ 1 emit [char] D emit ;
+
+: mss ( count -- )
+  200 * 200 * 0 do 1 drop loop ;
+
+: left ( count -- )
+  0 do left1 800 mss loop ;
+
+: up ( count -- )
+  0 do up1 loop ;
+
+: down ( count -- )
+  0 do down1 loop ;
 
 : saystack cr .s cr ;
 
 : 5As ( -- )
   10 spaces 5 0 do 65 emit loop ;
-
 
 : 5up ( -- )
   5 0
@@ -30,6 +41,8 @@
   5 up \ 5 0 do up1 loop
   7 0 do 43 emit loop
   cr
+  40 spaces
+  40 left
 ;
 
 0 [IF]
