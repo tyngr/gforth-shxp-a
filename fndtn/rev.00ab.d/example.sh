@@ -1,2 +1,4 @@
 #!/bin/sh
-./forth.sh go
+./forth.sh go 9 up
+echo "                      sleeping"
+sleep 1
