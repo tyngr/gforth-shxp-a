@@ -1,4 +1,7 @@
-: esc[[ 27 [char] [ swap emit emit ; \ system declared esc[ already!
+: esc[[ ( -- )
+  27 [char] [ swap emit emit ; \ system declared esc[ already!
+: saystack cr .s cr ;
+: gobee saystack ;
 : go cr 10 spaces 5 0 do 65 emit loop cr cr ;
 
 0 [IF]
