@@ -101,6 +101,10 @@
 : gobee saystack ;
 : gocee 10 spaces 5 0 do 65 emit loop cr cr ;
 
+: funstring ( -- )
+  s" Donkey Kong" type
+;
+
 : go ( -- )
   nocolor
   2 up
@@ -114,7 +118,9 @@
   40 spaces
   40 left
   2000 mss
-  40 right
+  20 right
+  funstring
+   9 right
   \ red
   \ green
   \ blue
