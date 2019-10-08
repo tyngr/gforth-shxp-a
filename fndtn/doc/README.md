@@ -49,6 +49,9 @@ These are the Escape Codes, which in general begin with the ESC
 character ASCII 27, 0x1b, octal 33).  The ESC char is usually
 followed with a left square bracket char, ASCII 91 (0x5b, oct 133)
 
+    ('escape codes' or 'ansi.sys' codes, are examples of
+    two names they may be known by, in common parlance).
+
 
 BINARY
 
@@ -73,6 +76,7 @@ BINARY
     13    0x0d    0 0 0 0   1 1 0 1    0 1 5
     14    0x0e    0 0 0 0   1 1 1 0    0 1 6
     15    0x0f    0 0 0 0   1 1 1 1    0 1 7
+
     16    0x10    0 0 0 1   0 0 0 0    0 2 0
 
     27    0x1b    0 0 0 1   1 0 1 1    0 3 3
