@@ -36,15 +36,15 @@
 : colpost ( -- )
   [char] m emit ;
 
+
 : colpre ( -- )
   esc[[
   [char] 0 emit
 ;
 
-: nocolor colpre colpost
-;
+: nocolor colpre colpost ;
 
-: brtcol ( -- )
+: brtpre ( -- )
   esc[[
   [char] 1 emit
 ;
@@ -56,6 +56,13 @@
   \ [char] ; emit
   \ color on stack
   \ [char] 3 [char] 2 swap emit emit
+  emit emit
+  colpost
+;
+
+: brtcol ( -- )
+  brtpre
+  [char] ; emit
   emit emit
   colpost
 ;
@@ -109,6 +116,7 @@
   nocolor
   2 up
   bkblue color
+  white brtcol
   5up 5As
   5 up \ 5 0 do up1 loop
   magenta color
