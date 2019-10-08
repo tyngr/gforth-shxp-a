@@ -1,0 +1,17 @@
+ $ cat -n example.sh 
+     1  #!/bin/sh
+     2  ./forth.sh go
+
+ $ cat -n forth.sh 
+     1  #!/bin/sh
+     2  /usr/bin/gforth job.fs -e "${1} ${2} ${3} ${4} ${5} ${6} ${7} ${8} ${9} bye"
+
+ $ cat -n job.fs 
+     1  s" vt100.fs" included
+
+ $ cat -n vt100.fs
+     1  \ multiple lines of forth source code here
+
+Tue Oct  8 08:58:54 UTC 2019
+
+END.
