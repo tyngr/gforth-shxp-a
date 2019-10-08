@@ -32,6 +32,7 @@ the terminal, from the serial device (such as a MODEM, or
 more generally, the device called '/dev/ttyS0' in Linux - as
 well as other similar 'tty' devices).
 
+
 This program demonstrates both ordinary typewritten characters
 (a b c d e 9 8 7 6 5 + - , > < = and all the rest) as generated
 by gforth, primarily using the (gforth) 'emit' word, which (in
@@ -63,6 +64,21 @@ BINARY
      5    0x05    0 0 0 0   0 1 0 1    0 0 5
      6    0x06    0 0 0 0   0 1 1 0    0 0 6
      7    0x07    0 0 0 0   0 1 1 1    0 0 7
+
+     8    0x08    0 0 0 0   1 0 0 0    0 1 0
+     9    0x09    0 0 0 0   1 0 0 1    0 1 1
+    10    0x0a    0 0 0 0   1 0 1 0    0 1 2
+    11    0x0b    0 0 0 0   1 0 1 1    0 1 3
+    12    0x0c    0 0 0 0   1 1 0 0    0 1 4
+    13    0x0d    0 0 0 0   1 1 0 1    0 1 5
+    14    0x0e    0 0 0 0   1 1 1 0    0 1 6
+    15    0x0f    0 0 0 0   1 1 1 1    0 1 7
+    16    0x10    0 0 0 1   0 0 0 0    0 2 0
+
+    27    0x1b    0 0 0 1   1 0 1 1    0 3 3
+
+    27    0x1b    0 0 0   0 1 1   0 1 1    0 3 3
+    28    0x1c    0 0 0   0 1 1   1 0 0    0 3 4
 
 On branch edits-aa-aa-
 Tue Oct  8 07:26:53 UTC 2019
